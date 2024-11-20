@@ -524,9 +524,6 @@ let finalResultSummary = ()=>{
     winner.style.display = "block";
     details.style.display = "inline-block";
     congratulation.style.display = "inline-block";
-        // finalResult.map((item)=>{
-        //     winner.innerHTML += `${item}<br>`;        
-        // })
         winner1.innerHTML = `<strong class="resultPlayerHeading">Player-1</strong><br><strong class="winnerStrong">Winner</strong> against <strong class="winnerStrong">${summaryResultWinnerP1}</strong> player <br> <strong class="loserStrong">Loser</strong> against <strong class="loserStrong">${summaryResultLoserP1}</strong> player.<br>`;
         winner.innerHTML = `<strong class="resultPlayerHeading">Other player</strong><br><strong class="winnerStrong">Winner</strong> : <strong class="winnerStrong">${summaryResultWinner}</strong> player <br> <strong class="loserStrong">Loser</strong>:  <strong class="loserStrong">${summaryResultLoser}</strong> player`;        
     }
@@ -551,64 +548,6 @@ let finalResultSummary = ()=>{
 
 
 
-
-// let resultPublish = ()=>{
-//     for(let i = 0; i < finalResult.length; i++){
-//         winner.innerHTML += finalResult[i] + "<br/>"
-//     }
-//     if( finalResult.indexOf( "Player-2 is Winner") != -1 && finalResult.indexOf( "Player-3 is Winner") != -1 && finalResult.indexOf( "Player-4 is Winner") != -1 ){
-//         winner1.innerHTML += `Player-1 is <span class="loserData">Loser</span> against All Player`;
-//     } else if( finalResult.indexOf( "Player-2 is Winner") == -1 && finalResult.indexOf( "Player-3 is Winner") == -1 && finalResult.indexOf( "Player-4 is Winner") == -1 ){
-//         winner1.innerHTML += `Player-1 is <span class="winnerData">Winner</span> against All Player`;
-//     }
-//     else if( finalResult.indexOf( "Player-2 is Winner") != -1 && finalResult.indexOf( "Player-3 is Winner") == -1 && finalResult.indexOf( "Player-4 is Winner") == -1 ){
-//         winner1.innerHTML += `Player-1 is <span class="loserData">Loser</span> against Player-2, <span class="winnerData">Winner</span> against Player-3 & Player-4`;
-//     }
-//     else if( finalResult.indexOf( "Player-2 is Winner") == -1 && finalResult.indexOf( "Player-3 is Winner") != -1 && finalResult.indexOf( "Player-4 is Winner") != -1 ){
-//         winner1.innerHTML += `Player-1 is <span class="winnerData">Winner</span> against Player-2, <span class="loserData">Loser</span> against Player-3 & Player-4`;
-//     }
-    
-//     else if( finalResult.indexOf( "Player-2 is Winner") == -1 && finalResult.indexOf( "Player-3 is Winner") != -1 && finalResult.indexOf( "Player-4 is Winner") == -1 ){
-//         winner1.innerHTML += `Player-1 is <span class="loserData">Loser</span> against Player-3, <span class="winnerData">Winner</span> against Player-2 & Player-4`;
-//     }
-//     else if( finalResult.indexOf( "Player-2 is Winner") != -1 && finalResult.indexOf( "Player-3 is Winner") == -1 && finalResult.indexOf( "Player-4 is Winner") != -1 ){
-//         winner1.innerHTML += `Player-1 is <span class="winnerData">Winner</span> against Player-3, <span class="loserData">Loser</span> against Player-2 & Player-4`;
-//     }
-//     else if( finalResult.indexOf( "Player-2 is Winner") == -1 && finalResult.indexOf( "Player-3 is Winner") == -1 && finalResult.indexOf( "Player-4 is Winner") != -1 ){
-//         winner1.innerHTML += `Player-1 is <span class="loserData">Loser</span> against Player-4, <span class="winnerData">Winner</span> against Player-2 & Player-3`;
-//     }
-//     else if( finalResult.indexOf( "Player-2 is Winner") != -1 && finalResult.indexOf( "Player-3 is Winner") != -1 && finalResult.indexOf( "Player-4 is Winner") == -1 ){
-//         winner1.innerHTML += `Player-1 is <span class="winnerData">Winner</span> against Player-4, <span class="loserData">Loser</span> against Player-2 & Player-3`;
-//     }    
-//     congratulation.style.display = "block";
-// }
-
-// details.addEventListener("click",(event)=>{
-
-//     inputArrayPlayer1.style.display = "block";
-//     inputArrayPlayer2.style.display = "block";
-//     inputArrayPlayer3.style.display = "block";
-//     inputArrayPlayer4.style.display = "block";
-    
-//     main.style.minHeight = "370px";
-//     main.style.display = "inherit";
-//     main.style.textAlign = "center";
-//     winner1.style.display = "none";
-//     winner.style.display = "none";
-//     congratulation.style.display = "none";
-//     titleWrapper.style.display = "none";
-//     event.target.style.display = "none";
-//     playAgain.style.display = "inline-block";
-//     titleForFinal.style.display = "inline-block";
-    
-//     inputArrayPlayerValue1.innerHTML += playerOneInputValue;
-//     // playerTwoInputValue.map((item)=>{
-//     //     inputArrayPlayerValue2.innerHTML += `    "${item}"`;
-//     // })
-//         inputArrayPlayerValue2.innerHTML = inputValuePlayer2;
-//         inputArrayPlayerValue3.innerHTML = inputValuePlayer3;
-//         inputArrayPlayerValue4.innerHTML = inputValuePlayer4;
-// })
 
 let displayControl = (type)=>{
     if( type == "none" ){
