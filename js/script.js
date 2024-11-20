@@ -520,30 +520,32 @@ details.addEventListener("click",()=>{
 });
 // Result Showing function
 let finalResultSummary = ()=>{
-    winner1.style.display = "block";
-    winner.style.display = "block";
-    details.style.display = "inline-block";
-    congratulation.style.display = "inline-block";
-        winner1.innerHTML = `<strong class="resultPlayerHeading">Player-1</strong><br><strong class="winnerStrong">Winner</strong> against <strong class="winnerStrong">${summaryResultWinnerP1}</strong> player <br> <strong class="loserStrong">Loser</strong> against <strong class="loserStrong">${summaryResultLoserP1}</strong> player.<br>`;
-        winner.innerHTML = `<strong class="resultPlayerHeading">Other player</strong><br><strong class="winnerStrong">Winner</strong> : <strong class="winnerStrong">${summaryResultWinner}</strong> player <br> <strong class="loserStrong">Loser</strong>:  <strong class="loserStrong">${summaryResultLoser}</strong> player`;        
-    }
-    let finalResultInDetails = ()=>{
-        main.style.minHeight = "1100px";
-        winner1.style.display = "block";
-        winner.style.display = "block";
-        details.style.display = "none";
-        congratulation.style.display = "none";
-        playAgain.style.display = "inline-block";
-        titleForFinal.style.display = "inline-block";
-        titleWrapper.style.display = "none";
-        winner1.innerHTML = ""
-        winner.innerHTML = ""
-        finalResultPlayer1.map((item)=>{
-            winner1.innerHTML += `${item}<br>`;   
-        })
-        finalResult.map((item)=>{
-            winner.innerHTML += `${item}<br>`;        
-        })
+    // winner1.style.display = "block";
+    // winner.style.display = "block";
+    // details.style.display = "inline-block";
+    // congratulation.style.display = "inline-block";
+    displayControl("finalResultSummaryControl");
+    winner1.innerHTML = `<strong class="resultPlayerHeading">Player-1</strong><br><strong class="winnerStrong">Winner</strong> against <strong class="winnerStrong">${summaryResultWinnerP1}</strong> player <br> <strong class="loserStrong">Loser</strong> against <strong class="loserStrong">${summaryResultLoserP1}</strong> player.<br><br>`;
+    winner.innerHTML = `<strong class="resultPlayerHeading">Other player</strong><br><strong class="winnerStrong">Winner</strong> : <strong class="winnerStrong">${summaryResultWinner}</strong> player <br> <strong class="loserStrong">Loser</strong>:  <strong class="loserStrong">${summaryResultLoser}</strong> player`;        
+}
+let finalResultInDetails = ()=>{
+    // main.style.minHeight = "1100px";
+    // winner1.style.display = "block";
+    // winner.style.display = "block";
+    // details.style.display = "none";
+    // congratulation.style.display = "none";
+    // playAgain.style.display = "inline-block";
+    // titleForFinal.style.display = "inline-block";
+    // titleWrapper.style.display = "none";
+    displayControl("finalResultInDetailsControl");
+    winner1.innerHTML = ""
+    winner.innerHTML = ""
+    finalResultPlayer1.map((item)=>{
+        winner1.innerHTML += `${item}<br>`;   
+    })
+    finalResult.map((item)=>{
+        winner.innerHTML += `${item}<br>`;        
+    })
 }
 
 
@@ -599,5 +601,19 @@ let displayControl = (type)=>{
         playerInputBtn10.style.display = `none`;
         chance.style.display = `none`;
         chanceCount.style.display = `none`;
+    }else if( type == "finalResultInDetailsControl" ){
+        main.style.minHeight = "1000px";
+        winner1.style.display = "block";
+        winner.style.display = "block";
+        details.style.display = "none";
+        congratulation.style.display = "none";
+        playAgain.style.display = "inline-block";
+        titleForFinal.style.display = "inline-block";
+        titleWrapper.style.display = "none";
+    }else if( type == "finalResultSummaryControl" ){
+        winner1.style.display = "block";
+        winner.style.display = "block";
+        details.style.display = "inline-block";
+        congratulation.style.display = "inline-block";
     }
 }
