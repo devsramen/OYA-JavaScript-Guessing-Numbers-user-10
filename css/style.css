@@ -1,3 +1,4 @@
+/* Author : Ramen Biswas */
 *{
     padding: 0;
     margin: 0;
@@ -143,13 +144,18 @@ body {
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
     position: absolute;
-    top: 205px;
-    right: 75px;
+    top: 260px;
+    right: 60px;
     box-shadow: inset 0px 0px 10px 4px rgba(0,0,0,0.36);
     -webkit-box-shadow: inset 0px 0px 10px 4px rgba(0,0,0,0.36);
     -moz-box-shadow: inset 0px 0px 10px 4px rgba(0,0,0,0.36);
     animation: upDownElement 2s linear infinite;
     -webkit-animation: upDownElement 1s linear infinite;
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
     display: none;
 }
 @keyframes upDownElement {
@@ -168,10 +174,14 @@ body {
         -o-transform: scale(1.1);
     }
 }
+#details:hover{
+    background-color: #a903be;
+}
 #playAgain{
     min-width: 90%;
     font-size: 30px;
     font-weight: 700;
+    text-align: center;
     color: #fff;
     background-color: #dd05fa;
     padding: 15px 15px;
@@ -318,6 +328,18 @@ body {
     font-weight: 700;
     color: purple;
     margin-bottom: 25px;
+}
+.loserStrong{
+    font-size: 35px;
+    color: red;
+}
+.winnerStrong{
+    font-size: 35px;
+    color: green;
+}
+.resultPlayerHeading{
+    font-size: 45px;
+    color: saddlebrown;
 }
 #congratulation {
     width: 100%;

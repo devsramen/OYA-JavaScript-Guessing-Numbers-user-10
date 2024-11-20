@@ -69,6 +69,10 @@ let inputValuePlayer10 = []
 
 let finalResultPlayer1 = []
 let finalResult = []
+let summaryResultWinnerP1 = 0;
+let summaryResultLoserP1 = 0;
+let summaryResultWinner = 0;
+let summaryResultLoser = 0;
 
 let chanceReset = 3;
 let count = chanceReset;
@@ -154,8 +158,10 @@ playerInputBtn2.addEventListener("click",(event)=>{
                 count = chanceReset;
                 chanceCount.innerHTML = count;
                 playerName.innerHTML = `Player-3`
-                finalResult.push("Player-2 is Winner")
-                finalResultPlayer1.push("Player-1 Looser against Player-2")
+                finalResult.push(`Player-2 is <strong class="winnerStrong">Winner</strong>`);
+                summaryResultWinner++;
+                finalResultPlayer1.push(`Player-1: <strong class="loserStrong">Loser</strong> against Player-2`)
+                summaryResultLoserP1++;
                 console.log(finalResult);  
                 console.log(finalResultPlayer1)              
             }else if(inputValuePlayer2.length == count){
@@ -163,8 +169,10 @@ playerInputBtn2.addEventListener("click",(event)=>{
                 count = chanceReset;
                 chanceCount.innerHTML = count;
                 playerName.innerHTML = `Player-3`
-                finalResult.push("Player-2 is Loser")
-                finalResultPlayer1.push("Player1 Winner against Player-2")
+                finalResult.push(`Player-2 is <strong class="loserStrong">Loser</strong>`);
+                summaryResultLoser++;
+                finalResultPlayer1.push(`Player1: <strong class="winnerStrong">Winner</strong> against Player-2`)
+                summaryResultWinnerP1++
                 console.log(finalResult);
                 console.log(finalResultPlayer1)
             }
@@ -191,8 +199,10 @@ playerInputBtn3.addEventListener("click",(event)=>{
                 count = chanceReset;
                 chanceCount.innerHTML = count;
                 playerName.innerHTML = `Player-4`
-                finalResult.push("Player-3 is Winner")
-                finalResultPlayer1.push("Player-1 Looser against Player-3")
+                finalResult.push(`Player-3 is <strong class="winnerStrong">Winner</strong>`);
+                summaryResultWinner++;
+                finalResultPlayer1.push(`Player-1: <strong class="loserStrong">Loser</strong> against Player-3`)
+                summaryResultLoserP1++;
                 console.log(finalResult);  
                 console.log(finalResultPlayer1)              
             }else if(inputValuePlayer3.length == count){
@@ -200,8 +210,10 @@ playerInputBtn3.addEventListener("click",(event)=>{
                 count = chanceReset;
                 chanceCount.innerHTML = count;
                 playerName.innerHTML = `Player-4`
-                finalResult.push("Player-3 is Loser")
-                finalResultPlayer1.push("Player1 Winner against Player-3")
+                finalResult.push(`Player-3 is <strong class="loserStrong">Loser</strong>`);
+                summaryResultLoser++;
+                finalResultPlayer1.push(`Player1: <strong class="winnerStrong">Winner</strong> against Player-3`)
+                summaryResultWinnerP1++
                 console.log(finalResult);
                 console.log(finalResultPlayer1)
             }
@@ -228,8 +240,10 @@ playerInputBtn4.addEventListener("click",(event)=>{
                 count = chanceReset;
                 chanceCount.innerHTML = count;
                 playerName.innerHTML = `Player-5`
-                finalResult.push("Player-4 is Winner")
-                finalResultPlayer1.push("Player-1 Looser against Player-4")
+                finalResult.push(`Player-4 is <strong class="winnerStrong">Winner</strong>`);
+                summaryResultWinner++;
+                finalResultPlayer1.push(`Player1: <strong class="loserStrong">Loser</strong> against Player-4`)
+                summaryResultLoserP1++;
                 console.log(finalResult);  
                 console.log(finalResultPlayer1)              
             }else if(inputValuePlayer4.length == count){
@@ -237,8 +251,10 @@ playerInputBtn4.addEventListener("click",(event)=>{
                 count = chanceReset;
                 chanceCount.innerHTML = count;
                 playerName.innerHTML = `Player-5`
-                finalResult.push("Player-4 is Loser")
-                finalResultPlayer1.push("Player1 Winner against Player-4")
+                finalResult.push(`Player-4 is <strong class="loserStrong">Loser</strong>`);
+                summaryResultLoser++;
+                finalResultPlayer1.push(`Player1: <strong class="winnerStrong">Winner</strong> against Player-4`)
+                summaryResultWinnerP1++
                 console.log(finalResult);
                 console.log(finalResultPlayer1)
             }
@@ -265,8 +281,10 @@ playerInputBtn5.addEventListener("click",(event)=>{
                 count = chanceReset;
                 chanceCount.innerHTML = count;
                 playerName.innerHTML = `Player-6`
-                finalResult.push("Player-5 is Winner")
-                finalResultPlayer1.push("Player-1 Looser against Player-5")
+                finalResult.push(`Player-5 is <strong class="winnerStrong">Winner</strong>`);
+                summaryResultWinner++;
+                finalResultPlayer1.push(`Player-1: <strong class="loserStrong">Loser</strong> against Player-5`)
+                summaryResultLoserP1++;
                 console.log(finalResult);  
                 console.log(finalResultPlayer1)              
             }else if(inputValuePlayer5.length == count){
@@ -274,8 +292,10 @@ playerInputBtn5.addEventListener("click",(event)=>{
                 count = chanceReset;
                 chanceCount.innerHTML = count;
                 playerName.innerHTML = `Player-6`
-                finalResult.push("Player-5 is Loser")
-                finalResultPlayer1.push("Player1 Winner against Player-5")
+                finalResult.push(`Player-5 is <strong class="loserStrong">Loser</strong>`);
+                summaryResultLoser++;
+                finalResultPlayer1.push(`Player1: <strong class="winnerStrong">Winner</strong> against Player-5`)
+                summaryResultWinnerP1++
                 console.log(finalResult);
                 console.log(finalResultPlayer1)
             }
@@ -302,8 +322,10 @@ playerInputBtn6.addEventListener("click",(event)=>{
                 count = chanceReset;
                 chanceCount.innerHTML = count;
                 playerName.innerHTML = `Player-7`
-                finalResult.push("Player-6 is Winner")
-                finalResultPlayer1.push("Player-1 Looser against Player-6")
+                finalResult.push(`Player-6 is <strong class="winnerStrong">Winner</strong>`);
+                summaryResultWinner++;
+                finalResultPlayer1.push(`Player-1: <strong class="loserStrong">Loser</strong> against Player-6`)
+                summaryResultLoserP1++;
                 console.log(finalResult);  
                 console.log(finalResultPlayer1)              
             }else if(inputValuePlayer6.length == count){
@@ -311,8 +333,10 @@ playerInputBtn6.addEventListener("click",(event)=>{
                 count = chanceReset;
                 chanceCount.innerHTML = count;
                 playerName.innerHTML = `Player-7`
-                finalResult.push("Player-6 is Loser")
-                finalResultPlayer1.push("Player1 Winner against Player-6")
+                finalResult.push(`Player-6 is <strong class="loserStrong">Loser</strong>`);
+                summaryResultLoser++;
+                finalResultPlayer1.push(`Player1: <strong class="winnerStrong">Winner</strong> against Player-6`)
+                summaryResultWinnerP1++
                 console.log(finalResult);
                 console.log(finalResultPlayer1)
             }
@@ -339,8 +363,10 @@ playerInputBtn7.addEventListener("click",(event)=>{
                 count = chanceReset;
                 chanceCount.innerHTML = count;
                 playerName.innerHTML = `Player-8`
-                finalResult.push("Player-7 is Winner")
-                finalResultPlayer1.push("Player-1 Looser against Player-7")
+                finalResult.push(`Player-7 is <strong class="winnerStrong">Winner</strong>`);
+                summaryResultWinner++;
+                finalResultPlayer1.push(`Player-1: <strong class="loserStrong">Loser</strong> against Player-7`)
+                summaryResultLoserP1++;
                 console.log(finalResult);  
                 console.log(finalResultPlayer1)              
             }else if(inputValuePlayer7.length == count){
@@ -348,8 +374,10 @@ playerInputBtn7.addEventListener("click",(event)=>{
                 count = chanceReset;
                 chanceCount.innerHTML = count;
                 playerName.innerHTML = `Player-8`
-                finalResult.push("Player-7 is Loser")
-                finalResultPlayer1.push("Player1 Winner against Player-7")
+                finalResult.push(`Player-7 is <strong class="loserStrong">Loser</strong>`);
+                summaryResultLoser++;
+                finalResultPlayer1.push(`Player1: <strong class="winnerStrong">Winner</strong> against Player-7`)
+                summaryResultWinnerP1++
                 console.log(finalResult);
                 console.log(finalResultPlayer1)
             }
@@ -376,8 +404,10 @@ playerInputBtn8.addEventListener("click",(event)=>{
                 count = chanceReset;
                 chanceCount.innerHTML = count;
                 playerName.innerHTML = `Player-9`
-                finalResult.push("Player-8 is Winner")
-                finalResultPlayer1.push("Player-1 Looser against Player-8")
+                finalResult.push(`Player-8 is <strong class="winnerStrong">Winner</strong>`);
+                summaryResultWinner++;
+                finalResultPlayer1.push(`Player-1: <strong class="loserStrong">Loser</strong> against Player-8`)
+                summaryResultLoserP1++;
                 console.log(finalResult);  
                 console.log(finalResultPlayer1)              
             }else if(inputValuePlayer8.length == count){
@@ -385,8 +415,10 @@ playerInputBtn8.addEventListener("click",(event)=>{
                 count = chanceReset;
                 chanceCount.innerHTML = count;
                 playerName.innerHTML = `Player-9`
-                finalResult.push("Player-8 is Loser")
-                finalResultPlayer1.push("Player1 Winner against Player-8")
+                finalResult.push(`Player-8 is <strong class="loserStrong">Loser</strong>`);
+                summaryResultLoser++;
+                finalResultPlayer1.push(`Player1: <strong class="winnerStrong">Winner</strong> against Player-8`)
+                summaryResultWinnerP1++
                 console.log(finalResult);
                 console.log(finalResultPlayer1)
             }
@@ -413,8 +445,10 @@ playerInputBtn9.addEventListener("click",(event)=>{
                 count = chanceReset;
                 chanceCount.innerHTML = count;
                 playerName.innerHTML = `Player-10`
-                finalResult.push("Player-9 is Winner")
-                finalResultPlayer1.push("Player-1 Looser against Player-9")
+                finalResult.push(`Player-9 is <strong class="winnerStrong">Winner</strong>`);
+                summaryResultWinner++;
+                finalResultPlayer1.push(`Player-1: <strong class="loserStrong">Loser</strong> against Player-9`)
+                summaryResultLoserP1++;
                 console.log(finalResult);  
                 console.log(finalResultPlayer1)              
             }else if(inputValuePlayer9.length == count){
@@ -422,8 +456,10 @@ playerInputBtn9.addEventListener("click",(event)=>{
                 count = chanceReset;
                 chanceCount.innerHTML = count;
                 playerName.innerHTML = `Player-10`
-                finalResult.push("Player-9 is Loser")
-                finalResultPlayer1.push("Player1 Winner against Player-9")
+                finalResult.push(`Player-9 is <strong class="loserStrong">Loser</strong>`);
+                summaryResultLoser++;
+                finalResultPlayer1.push(`Player1: <strong class="winnerStrong">Winner</strong> against Player-9`)
+                summaryResultWinnerP1++
                 console.log(finalResult);
                 console.log(finalResultPlayer1)
             }
@@ -450,19 +486,25 @@ playerInputBtn10.addEventListener("click",(event)=>{
                 count = chanceReset;
                 chanceCount.innerHTML = count;
                 playerName.innerHTML = ""
-                finalResult.push("Player-10 is Winner")
-                finalResultPlayer1.push("Player-1 Looser against Player-10")
+                finalResult.push(`Player-10 is <strong class="winnerStrong">Winner</strong>`);
+                summaryResultWinner++;
+                finalResultPlayer1.push(`Player-1: <strong class="loserStrong">Loser</strong> against Player-10`)
+                summaryResultLoserP1++;
                 console.log(finalResult);  
-                console.log(finalResultPlayer1)              
+                console.log(finalResultPlayer1)
+                finalResultSummary()
             }else if(inputValuePlayer10.length == count){
                 displayControl("player10")
                 count = chanceReset;
                 chanceCount.innerHTML = count;
                 playerName.innerHTML = ""
-                finalResult.push("Player-10 is Loser")
-                finalResultPlayer1.push("Player1 Winner against Player-10")
+                finalResult.push(`Player-10 is <strong class="loserStrong">Loser</strong>`);
+                summaryResultLoser++;
+                finalResultPlayer1.push(`Player1: <strong class="winnerStrong">Winner</strong> against Player-10`)
+                summaryResultWinnerP1++
                 console.log(finalResult);
                 console.log(finalResultPlayer1)
+                finalResultSummary()
             }
         }else{
             errorMessage.style.display = "block"
@@ -473,6 +515,42 @@ playerInputBtn10.addEventListener("click",(event)=>{
         errorMessage.innerHTML = "Please Enter a Number, characters & zero are not allowed."
     } 
 })
+details.addEventListener("click",()=>{
+    finalResultInDetails()
+});
+// Result Showing function
+let finalResultSummary = ()=>{
+    winner1.style.display = "block";
+    winner.style.display = "block";
+    details.style.display = "inline-block";
+    congratulation.style.display = "inline-block";
+        // finalResult.map((item)=>{
+        //     winner.innerHTML += `${item}<br>`;        
+        // })
+        winner1.innerHTML = `<strong class="resultPlayerHeading">Player-1</strong><br><strong class="winnerStrong">Winner</strong> against <strong class="winnerStrong">${summaryResultWinnerP1}</strong> player <br> <strong class="loserStrong">Loser</strong> against <strong class="loserStrong">${summaryResultLoserP1}</strong> player.<br>`;
+        winner.innerHTML = `<strong class="resultPlayerHeading">Other player</strong><br><strong class="winnerStrong">Winner</strong> : <strong class="winnerStrong">${summaryResultWinner}</strong> player <br> <strong class="loserStrong">Loser</strong>:  <strong class="loserStrong">${summaryResultLoser}</strong> player`;        
+    }
+    let finalResultInDetails = ()=>{
+        main.style.minHeight = "1100px";
+        winner1.style.display = "block";
+        winner.style.display = "block";
+        details.style.display = "none";
+        congratulation.style.display = "none";
+        playAgain.style.display = "inline-block";
+        titleForFinal.style.display = "inline-block";
+        titleWrapper.style.display = "none";
+        winner1.innerHTML = ""
+        winner.innerHTML = ""
+        finalResultPlayer1.map((item)=>{
+            winner1.innerHTML += `${item}<br>`;   
+        })
+        finalResult.map((item)=>{
+            winner.innerHTML += `${item}<br>`;        
+        })
+}
+
+
+
 
 // let resultPublish = ()=>{
 //     for(let i = 0; i < finalResult.length; i++){
