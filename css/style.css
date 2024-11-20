@@ -1,0 +1,347 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+body {
+    background-color: antiquewhite;
+}
+#main {
+    width: 600px;
+    background-color: lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto 0;
+    padding: 35px 20px 20px 20px;
+    box-shadow: inset 0px 0px 10px 4px rgba(0,0,0,0.36);
+    -webkit-box-shadow: inset 0px 0px 10px 4px rgba(0,0,0,0.36);
+    -moz-box-shadow: inset 0px 0px 10px 4px rgba(0,0,0,0.36);
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    position: relative;
+}
+#mainInnerDive {
+    /* border: 1px solid red; */
+    width: 96%;
+}
+#timer {
+    width: 220px;
+    font-size: 20px;
+    font-weight: 100;
+    font-style: italic;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #ff0027;
+}
+.titleWrapper{
+    height: 80px;
+    text-align: center;
+}
+.title,
+.titleForFinal{
+    display: inline-block;
+    font-size: 48px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    position: relative;
+    animation: titleColorAnim 6s linear infinite alternate;
+    -webkit-animation: titleColorAnim 6s linear infinite alternate;
+}
+.title::after{
+    content: "";
+    width: 2px;
+    height: 80%;
+    background-color: #000;
+    position: absolute;
+    top: 55%;
+    right: -4px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    animation: cursorBling 0.5s linear infinite alternate;
+    -webkit-animation: cursorBling 0.5s linear infinite alternate;
+}
+.titleForFinal{
+    display: none;
+}
+#inputArrayPlayer1,
+#inputArrayPlayer2,
+#inputArrayPlayer3,
+#inputArrayPlayer4{
+    display: none;
+    font-size: 30px;
+    font-weight: 700;
+    color: #002288;
+}
+#inputArrayPlayer1,
+#inputArrayPlayerValue1{
+    color: #ce6300;
+}
+#inputArrayPlayerValue1{
+    font-size: 35px;
+    font-weight: 700;
+}
+#inputArrayPlayerValue2,
+#inputArrayPlayerValue3,
+#inputArrayPlayerValue4{
+    font-weight: 700;
+    color: #057b03;
+}
+.playerResultText{
+    display: inline-block;
+    text-align: left;
+}
+@keyframes cursorBling {
+    from{
+        height: 0;
+        opacity: 0;
+    }
+    to{
+        height: 80%;
+        opacity: 1;
+    }
+}
+@keyframes titleColorAnim {
+    0%{
+        color: #d2691e;
+    }
+    25%{
+        color: #d63d00;
+    }
+    50%{
+        color: #990091;
+    }
+    75%{
+        color: #1a9900;
+    }
+    100%{
+        color: #0027e8;
+    }
+}
+
+#details{
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #dd05fa;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    position: absolute;
+    top: 205px;
+    right: 75px;
+    box-shadow: inset 0px 0px 10px 4px rgba(0,0,0,0.36);
+    -webkit-box-shadow: inset 0px 0px 10px 4px rgba(0,0,0,0.36);
+    -moz-box-shadow: inset 0px 0px 10px 4px rgba(0,0,0,0.36);
+    animation: upDownElement 2s linear infinite;
+    -webkit-animation: upDownElement 1s linear infinite;
+    display: none;
+}
+@keyframes upDownElement {
+    from{
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+    to{
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+    }
+}
+#playAgain{
+    min-width: 90%;
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #dd05fa;
+    padding: 15px 15px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    box-shadow: inset 0px 0px 10px 4px rgba(0,0,0,0.36);
+    -webkit-box-shadow: inset 0px 0px 10px 4px rgba(0,0,0,0.36);
+    -moz-box-shadow: inset 0px 0px 10px 4px rgba(0,0,0,0.36);
+    display: none;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+}
+#playAgain:hover{
+    background-color: #a500bb;
+}
+#playerInput2,
+#playerInputBtn2,
+#playerInput3,
+#playerInputBtn3,
+#playerInput4,
+#playerInputBtn4,
+#playerInput5,
+#playerInputBtn5,
+#playerInput6,
+#playerInputBtn6,
+#playerInput7,
+#playerInputBtn7,
+#playerInput8,
+#playerInputBtn8,
+#playerInput9,
+#playerInputBtn9,
+#playerInput10,
+#playerInputBtn10{
+    display: none;
+}
+#playerInput1,
+#playerInput2,
+#playerInput3,
+#playerInput4,
+#playerInput5,
+#playerInput6,
+#playerInput7,
+#playerInput8,
+#playerInput9,
+#playerInput10{
+    width: 410px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: inset 0px 0px 10px 4px rgba(0,0,0,0.36);
+    -webkit-box-shadow: inset 0px 0px 10px 4px rgba(0,0,0,0.36);
+    -moz-box-shadow: inset 0px 0px 10px 4px rgba(0,0,0,0.36);
+}
+#playerInput2::placeholder,
+#playerInput3::placeholder,
+#playerInput4::placeholder,
+#playerInput5::placeholder,
+#playerInput6::placeholder,
+#playerInput7::placeholder,
+#playerInput8::placeholder,
+#playerInput9::placeholder,
+#playerInput10::placeholder{
+    font-size: 18px;
+}
+
+
+#playerInputBtn1,
+#playerInputBtn2,
+#playerInputBtn3,
+#playerInputBtn4,
+#playerInputBtn5,
+#playerInputBtn6,
+#playerInputBtn7,
+#playerInputBtn8,
+#playerInputBtn9,
+#playerInputBtn10{
+    width: 116px;
+    background-color: #49038a26;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: inset 0px 0px 10px 4px rgba(0,0,0,0.36);
+    -webkit-box-shadow: inset 0px 0px 25px 0px rgba(0,0,0,0.36);
+    -moz-box-shadow: inset 0px 0px 10px 4px rgba(0,0,0,0.36);
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+}
+#playerInputBtn1:hover,
+#playerInputBtn2:hover,
+#playerInputBtn3:hover,
+#playerInputBtn4:hover,
+#playerInputBtn5:hover,
+#playerInputBtn6:hover,
+#playerInputBtn7:hover,
+#playerInputBtn8:hover,
+#playerInputBtn9:hover,
+#playerInputBtn10:hover{
+    background-color: #8a034c26;    
+}
+#errorMessage{
+    display: inline-block;
+    color: red;
+    text-transform: capitalize;
+    margin-top: 10px;
+}
+#chance{
+    display: none;
+}
+#winner,
+#winner1{
+    font-size: 30px;
+    font-weight: 700;
+    color: purple;
+    margin-bottom: 25px;
+}
+#congratulation {
+    width: 100%;
+    height: 510px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    display: none;
+}
+.playerName{
+    text-align: center;
+}
+
+.winnerData {
+    font-size: 30px;
+    color: green;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.loserData {
+    font-size: 30px;
+    color: red;
+    text-transform: uppercase;
+    font-weight: 900;
+}
