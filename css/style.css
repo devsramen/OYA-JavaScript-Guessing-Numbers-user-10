@@ -51,7 +51,6 @@ ol,ul{
     position: relative;
 }
 #mainInnerDive {
-    /* border: 1px solid red; */
     width: 96%;
 }
 #timer {
@@ -93,6 +92,10 @@ ol,ul{
     -o-transform: translateY(-50%);
     animation: cursorBling 0.5s linear infinite alternate;
     -webkit-animation: cursorBling 0.5s linear infinite alternate;
+}
+.playerHeadingWrapper{
+    width: 133px;
+    margin: 0 auto;
 }
 .titleForFinal{
     display: none;
@@ -342,6 +345,10 @@ ol,ul{
     margin-top: 10px;
 }
 #chance{
+    font-size: 22px;
+    color: darkmagenta;
+    margin-left: 7px;
+    margin-bottom: 4px;
     display: none;
 }
 #inputValueViewPlayerOthers,
@@ -402,9 +409,6 @@ ol,ul{
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
     display: none;
-}
-.playerName{
-    text-align: center;
 }
 
 .winnerData {
