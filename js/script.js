@@ -33,6 +33,8 @@ const playerInput10 = document.querySelector("#playerInput10");
 const playerInputBtn10 = document.querySelector("#playerInputBtn10");
 
 
+const inputValueViewPlayer1 = document.querySelector("#inputValueViewPlayer1");
+const inputValueViewPlayerOthers = document.querySelector("#inputValueViewPlayerOthers");
 const winner1 = document.querySelector("#winner1");
 const winner = document.querySelector("#winner");
 let chance = document.querySelector("#chance");
@@ -68,14 +70,16 @@ let inputValuePlayer9 = []
 let inputValuePlayer10 = []
 
 
+
 let finalResultPlayer1 = []
 let finalResult = []
 let summaryResultWinnerP1 = 0;
 let summaryResultLoserP1 = 0;
 let summaryResultWinner = 0;
 let summaryResultLoser = 0;
+let allInputValueOfPlayer = [inputValuePlayer2,inputValuePlayer3,inputValuePlayer4,inputValuePlayer5,inputValuePlayer6,inputValuePlayer7,inputValuePlayer8,inputValuePlayer9,inputValuePlayer10]
 
-let chanceReset = 3;
+let chanceReset = 5;
 let count = chanceReset;
 
 
@@ -522,18 +526,25 @@ details.addEventListener("click",()=>{
 // Result Showing function
 let finalResultSummary = ()=>{
     displayControl("finalResultSummaryControl");
-    winner1.innerHTML = `<strong class="resultPlayerHeading">Player-1</strong><br><strong class="winnerStrong">Winner</strong> against <strong class="winnerStrong">${summaryResultWinnerP1}</strong> player <br> <strong class="loserStrong">Loser</strong> against <strong class="loserStrong">${summaryResultLoserP1}</strong> player.<br><br>`;
+    // winner1.innerHTML = inputValuePlayer1;
+    
+    winner1.innerHTML += `<strong class="resultPlayerHeading">Player-1</strong><br><strong class="winnerStrong">Winner</strong> against <strong class="winnerStrong">${summaryResultWinnerP1}</strong> player <br> <strong class="loserStrong">Loser</strong> against <strong class="loserStrong">${summaryResultLoserP1}</strong> player.<br><br>`;
     winner.innerHTML = `<strong class="resultPlayerHeading">Other player</strong><br><strong class="winnerStrong">Winner</strong> : <strong class="winnerStrong">${summaryResultWinner}</strong> player <br> <strong class="loserStrong">Loser</strong>:  <strong class="loserStrong">${summaryResultLoser}</strong> player`;        
 }
 let finalResultInDetails = ()=>{
     displayControl("finalResultInDetailsControl");
     winner1.innerHTML = ""
     winner.innerHTML = ""
+    inputValueViewPlayer1.innerHTML = `<span class="inputValueViewPlayer1Span">Player-1</span> had provided = <span class="inputValueViewPlayer1ValueSpan">[ ${inputValuePlayer1} ]</span>`;
     finalResultPlayer1.map((item)=>{
         winner1.innerHTML += `${item}<br>`;   
     })
     finalResult.map((item)=>{
         winner.innerHTML += `${item}<br>`;        
+    })
+    allInputValueOfPlayer.map((item)=>{
+        inputValueViewPlayerOthers.innerHTML += `<li>[ ${item} ]</li>`;
+
     })
 }
 
@@ -591,14 +602,16 @@ let displayControl = (type)=>{
         chance.style.display = `none`;
         chanceCount.style.display = `none`;
     }else if( type == "finalResultInDetailsControl" ){
-        main.style.minHeight = "1000px";
+        main.style.minHeight = "1020px";
         winner1.style.display = "block";
         winner.style.display = "block";
         details.style.display = "none";
         congratulation.style.display = "none";
         playAgain.style.display = "inline-block";
-        titleForFinal.style.display = "inline-block";
+        titleForFinal.style.display = "block";
         titleWrapper.style.display = "none";
+        inputValueViewPlayer1.style.display = "inline-block";
+        inputValueViewPlayerOthers.style.display = "inline-block";
     }else if( type == "finalResultSummaryControl" ){
         winner1.style.display = "block";
         winner.style.display = "block";
