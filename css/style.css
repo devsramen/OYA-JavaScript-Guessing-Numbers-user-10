@@ -320,11 +320,11 @@ ol,ul{
     box-shadow: inset 0px 0px 10px 4px rgba(0,0,0,0.36);
     -webkit-box-shadow: inset 0px 0px 25px 0px rgba(0,0,0,0.36);
     -moz-box-shadow: inset 0px 0px 10px 4px rgba(0,0,0,0.36);
-    transition: all linear 0.3s;
-    -webkit-transition: all linear 0.3s;
-    -moz-transition: all linear 0.3s;
-    -ms-transition: all linear 0.3s;
-    -o-transition: all linear 0.3s;
+    transition: all linear 0.1s;
+    -webkit-transition: all linear 0.1s;
+    -moz-transition: all linear 0.1s;
+    -ms-transition: all linear 0.1s;
+    -o-transition: all linear 0.1s;
 }
 #playerInputBtn1:hover,
 #playerInputBtn2:hover,
@@ -336,7 +336,8 @@ ol,ul{
 #playerInputBtn8:hover,
 #playerInputBtn9:hover,
 #playerInputBtn10:hover{
-    background-color: #8a034c26;    
+    /* background-color: #8a034c26;     */
+    background-color: #118a0354;    
 }
 #errorMessage{
     display: inline-block;

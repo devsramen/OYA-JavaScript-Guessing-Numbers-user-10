@@ -240,7 +240,7 @@ playerInputBtn4.addEventListener("click",(event)=>{
                 startCountingFunction()
                 finalResult.push(`Player-4 is <strong class="winnerStrong">Winner</strong>`);
                 summaryResultWinner++;
-                finalResultPlayer1.push(`Player1: <strong class="loserStrong">Loser</strong> against Player-4`)
+                finalResultPlayer1.push(`Player-1: <strong class="loserStrong">Loser</strong> against Player-4`)
                 summaryResultLoserP1++;
             }else if(inputValuePlayer4.length == count){
                 displayControl("player4")
@@ -250,7 +250,7 @@ playerInputBtn4.addEventListener("click",(event)=>{
                 startCountingFunction()
                 finalResult.push(`Player-4 is <strong class="loserStrong">Loser</strong>`);
                 summaryResultLoser++;
-                finalResultPlayer1.push(`Player1: <strong class="winnerStrong">Winner</strong> against Player-4`)
+                finalResultPlayer1.push(`Player-1: <strong class="winnerStrong">Winner</strong> against Player-4`)
                 summaryResultWinnerP1++
             }
         }else{
